@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "91460731-7f86-4253-bdbf-61d4461cbd2b",
+		"name": "TEnmoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39066516"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test-user2\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"frodo_baggins\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transfer by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test-user2\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers/100000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"100000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pending transfers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test-user2\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get approved transfers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test-user2\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers/approved",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"approved"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rejected transfers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test-user2\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers/rejected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"rejected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Transfer 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeId\": 10,\r\n    \"transferType\": \"REQUEST\",\r\n    \"statusId\": 1,\r\n    \"transferStatus\": \"PENDING\",\r\n    \"accountFrom\": 1000,\r\n    \"accountTo\": 2000,\r\n    \"amount\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approved Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers/approved/200003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"approved",
+						"200003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transfers/rejected/200004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"rejected",
+						"200004"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Transfer 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeId\": 10,\r\n    \"transferType\": \"REQUEST\",\r\n    \"statusId\": 1,\r\n    \"transferStatus\": \"PENDING\",\r\n    \"accountFrom\": 1000,\r\n    \"accountTo\": 2000,\r\n    \"amount\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcm9kb19iYWdnaW5zIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTczMDcyODE4MH0.L_i8ar39SFmU7nQICH-4RKMS8TgKDZHDakITcqrT5OhWRrkP6DCWxKDYaGBY0_uMpesaW3ozdkIGP0fEa-M3NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeId\": 10,\r\n    \"transferType\": \"REQUEST\",\r\n    \"statusId\": 1,\r\n    \"transferStatus\": \"PENDING\",\r\n    \"accountFrom\": 1000,\r\n    \"accountTo\": 2000,\r\n    \"amount\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
